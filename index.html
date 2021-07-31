@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--
+      Import Google Icon Font
+      Theme sourced from https://materializecss.com/getting-started.html
+      -->
+      <title>Save Chatola: Official Website of the movement</title>
+      <meta property="keywords" content="Environment, Chatola, Mukteshwar, Mountain Ecosystems , Chatola Himalaya, Save Chatola campaign, Forest fire, Pine , ">
+
+      <link rel="stylesheet" href="https://savedumna.thereisnoearthb.com/style.css">
+   <link rel="icon" href="https://thereisnoearthb.com/TINEB_LOGO.jpeg" type="image/x-icon"/>
+
+   <link rel='stylesheet' id='hive-style-css' href='https://thereisnoearthb.com/styled.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hive-fonts-css' href='https://fonts.googleapis.com/css?family=Noto%20Serif%3A400%2C700%2C400italic%7CPlayfair%20Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+      <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+      <!--Import materialize.css-->
+      <!--<link type="text/css" rel="stylesheet" href="https://thereisnoearthb.com/css/materialize.css"  media="screen,projection"/>-->
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+
+    <body><header id="masthead" class="site-header" role="banner">
+  <!--<h1 class="site-title site-title--large">-->    <!--<img id="userPhoto" src="TINEB_LOGO.png" alt="ThereIsNoEarthB logo">-->
+  <!--<a href="./" rel="home">
+  There Is No Earth B </a>
+  </h1>-->
+
+  <a href="https://twitter.com/search?q=%22SAVE%20Chatola%22&src=typed_query&f=live">
+  <h1 class="site-title site-title--large">
+    SAVE Chatola
+  </h1>
+  </a>
+
+<!--<a href="https://twitter.com/search?q=saveChatola&src=typed_query&f=live" id="userName">#SaveChatola</a>-->
+    <div id="links">
+      <!--<center>
+         <div class="wrap">
+        <a href="https://www.change.org/p/cmo-uttarakhand-declare-the-Chatola-forests-a-conservation-reserve" target="_blank"><button class="button">Send the mail!</button></a>
+        </div>
+        <br>-->
+      <!--<a href="https://instagram.com/Chatolaconservationclub" target="_blank"><img src="https://thereisnoearthb.com/icons/instagram.svg" alt="Instagram icon" width="35" height="35"></a>&nbsp;&nbsp;
+      <a href="https://twitter.com/Chatolaconserva1" target="_blank"><img src="https://thereisnoearthb.com/icons/twitter.svg" alt="Twitter icon" width="35" height="35"></a>&nbsp;&nbsp;
+-->
+         <!--<a class="link" href="update.html" target="_blank">Update: 9th June 2021</a>-->
+        <a class="link" id = "Button1" href="" target="_blank">✊</a>
+         <a class="link" id = "Button2" href="" target="_blank">✊✊</a>
+         <a class="link" id = "Button3" href="" target="_blank">✊✊✊</a>
+         <a class="link" id = "Button4" href="" target="_blank">✊✊✊✊✊✊</a>
+         <a class="link" id = "Button5" href="" target="_blank">✊✊✊✊✊✊✊✊✊</a>
+         <a class="link" id = "Button6" href="" target="_blank">...................</a>
+         <a class="link" id = "Button7" href="" target="_blank">.................</a>
+         <a class="link" id = "Button8" href="" target="_blank">...............</a>
+         <a class="link" id = "Button9" href="" target="_blank">.............</a>
+         <a class="link" id = "Button10" href="" target="_blank">...........</a>
+         <a class="link" id = "Button11" href="" target="_blank">.........</a>
+         <a class="link" id = "Button12" href="" target="_blank">.......</a>
+         <a class="link" id = "Button13" href="" target="_blank">.....</a>
+         <a class="link" id = "Button14" href="" target="_blank">...</a>
+         <a class="link" id = "Button15" href="" target="_blank">.</a>
+         <a class="link" id = "Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveChatola which controls the content. We do not have any political or religious affilitations. With anyone.</a>
+
+
+<!--</center>
+-->
+
+
+
+ </div>
+
+    <!--<a class="link" id="Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveChatola which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>-->
+</header>
+        <!--JavaScript at end of body for optimized loading-->
+
+        <!--<script>
+            function copy() {
+                var copyText = document.querySelector("#input");
+                copyText.select();
+                document.execCommand("copy");
+          }
+          document.querySelector("#copy").addEventListener("click", copy);
+        </script>-->
+
+     <script>
+            var sheetreq = new XMLHttpRequest();
+            sheetreq.overrideMimeType("application/json");
+            sheetreq.open('GET', "https://spreadsheets.google.com/feeds/cells/1hV-2D6gBsgtOZk_B9JQOOrt8FCQ18gSfVMKn2dHeboE/1/public/full?alt=json", true);
+            sheetreq.onload  = function() {
+               var jsonResponse = JSON.parse(sheetreq.responseText);
+               // do something with jsonResponse
+                 var i;
+                 for (i = 2; i < 32 ; i+=2)
+                      {
+                        document.getElementById("Button"+(i/2)).innerHTML = jsonResponse.feed.entry[i].content.$t;
+                        document.getElementById("Button"+(i/2)).href = jsonResponse.feed.entry[i+1].content.$t;
+                      }
+
+            };
+            sheetreq.send(null);
+        </script>
+
+        <script type="text/javascript" src="https://thereisnoearthb.com/js/materialize.min.js"></script>
+
+      </body>
+    </html>
