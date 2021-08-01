@@ -55,7 +55,7 @@
          <a class="link" id = "Button8" href="" target="_blank">...............</a>
          <a class="link" id = "Button9" href="" target="_blank">.............</a>
          <!--<a class="link" id = "Footer credits" href="https://thereisnoearthb.com" target="_blank"></a>
-         --><a href="https://thereisnoearthb.com/" target="_blank">This open source website has been created by There Is No Earth B for #SaveChatola which controls the content. We do not have any political or religious affilitations. With anyone.<br>✊ Solidarity</a>
+         --><a href="https://thereisnoearthb.com/" target="_blank">This open-source website has been created by There Is No Earth B for #SaveChatola which controls the content.<br>✊</a>
 
 
 <!--</center>
@@ -86,7 +86,7 @@
                var jsonResponse = JSON.parse(sheetreq.responseText);
                // do something with jsonResponse
                  var i;
-                 for (i = 2; i < 32 ; i+=2)
+                 for (i = 2; i < 20 ; i+=2)
                       {
                         document.getElementById("Button"+(i/2)).innerHTML = jsonResponse.feed.entry[i].content.$t;
                         document.getElementById("Button"+(i/2)).href = jsonResponse.feed.entry[i+1].content.$t;
