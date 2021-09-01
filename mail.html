@@ -1,7 +1,6 @@
 <html>
  <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
-    <p>If you don't have an email app set-up you will be redirected to the copy paste page</p>
     <script>
 
           var sites = [
@@ -10,10 +9,6 @@
 
 ];
 
-
-            function randomSite() {
-                var i = parseInt(Math.random() * sites.length);
-                location.href = sites[i];
 
 
 
@@ -29,14 +24,11 @@
                                     }
                 }
 
-            }
 
-            var timer = setTimeout(function() {
-                window.location='plainmail.html'
-            }, 3000);
 
-        <!--<body onload='randomSite()'>-->
+
+
     </script>
-    <body onload='randomSite()'>
+    <body onload='gfg_Run()'>
 </body>
 </html>
